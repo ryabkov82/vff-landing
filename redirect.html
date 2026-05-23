@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting to Hiddify...</title>
+    <script>
+        // Получаем ссылку из параметра URL (?url=...)
+        const urlParams = new URLSearchParams(window.location.search);
+        const hiddifyUrl = urlParams.get('url'); // Например: ?url=hiddify://import/https://example.com/sub/...
+
+        // Если ссылка есть, делаем редирект
+        if (hiddifyUrl) {
+            window.location.href = hiddifyUrl;
+        } else {
+            document.getElementById("error").textContent = "Ссылка не указана!";
+        }
+    </script>
+</head>
+<body>
+    <p id="error"></p>
+    <p>Если редирект не сработал, нажмите <a id="manual-link" href="#">вручную</a>.</p>
+    <script>
+        // Добавляем ссылку в кнопку (на случай, если редирект не сработал)
+        if (hiddifyUrl) {
+            document.getElementById("manual-link").href = hiddifyUrl;
+        }
+    </script>
+</body>
+</html>

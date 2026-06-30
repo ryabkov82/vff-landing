@@ -10,6 +10,7 @@ RSYNC_EXCLUDES = \
 
 guard:
 	@test -f index.html || (echo "index.html not found. Run make from repo root"; exit 1)
+	@test -f en/index.html || (echo "en/index.html not found. Run make from repo root"; exit 1)
 	@test -f sitemap.xml || (echo "sitemap.xml not found. Run make from repo root"; exit 1)
 	@test -d help || (echo "help directory not found. Run make from repo root"; exit 1)
 
@@ -22,5 +23,7 @@ deploy: guard
 
 check:
 	curl -I https://vpn-for-friends.com/
+	curl -I https://vpn-for-friends.com/en/
+	curl -I https://vpn-for-friends.com/en/buy/
 	curl -I https://vpn-for-friends.com/help/
 	curl -I https://vpn-for-friends.com/sitemap.xml

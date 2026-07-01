@@ -67,6 +67,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://vpn-for-friends.com/en/privacy/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vpn-for-friends.com/en/delivery/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vpn-for-friends.com/help/</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
